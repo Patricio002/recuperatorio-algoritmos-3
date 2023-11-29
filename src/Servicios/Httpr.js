@@ -46,12 +46,7 @@ export async function GET(url, request = null){
     if(request){
         uri = '?' + new URLSearchParams(request).toString();
     }
-
-/*return  fetch(backendurl + url)
-            .then(res=>res.json())
-            .then(json=>console.log(json))*/
-  
-             return await fetch(backendurl + url + uri, {
+         return await fetch(backendurl + url + uri, {
         method:'GET',
         mode:'cors',
         headers:{
